@@ -1,0 +1,36 @@
+NDefs               	LITERAL1
+NRotary             	LITERAL1
+
+ULONG_MAX           	LITERAL1
+LONG_MAX            	LITERAL1
+LONG_MIN            	LITERAL1
+
+ZERO                	LITERAL1
+NEWLINE             	LITERAL1
+NULLTERMINATOR      	LITERAL1
+
+ULONG_MAX           	LITERAL1
+LONG_MAX            	LITERAL1
+LONG_MIN            	LITERAL1
+UINT_MAX            	LITERAL1
+INT_MAX             	LITERAL1
+INT_MIN             	LITERAL1
+BYTE_MAX            	LITERAL1
+
+ADC_MAX             	LITERAL1
+PWM_MAX             	LITERAL1
+
+SERIALCOM_BAUD      	LITERAL1
+
+COUNTER_CLOCKWISE   	LITERAL1
+CLOCKWISE           	LITERAL1
+
+BCD2DEC             	LITERAL1
+addInterrupt        	KEYWORD2
+removeInterrupt			KEYWORD2
+
+Rotary				    KEYWORD1
+serviceRoutine			KEYWORD2
+getState				KEYWORD2
+getSwitch				KEYWORD2
+mode					KEYWORD2
