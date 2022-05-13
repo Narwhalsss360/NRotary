@@ -7,6 +7,8 @@
 	#include "WProgram.h"
 #endif
 
+#define NDEFS_VERSION "1.0.0"
+
 #define ZERO 0
 #define NEWLINE '\n'
 #define CARRIAGERETURN '\r'
@@ -32,5 +34,7 @@
 #define addInterrupt(pin, ISR, mode) attachInterrupt(digitalPinToInterrupt(pin), ISR, mode);
 #define removeInterrupt(pin) detachInterrupt(digitalPinToInterrupt(pin));
 #define BCD2DEC(num) hornerScheme(num, 0x10, 10)
+
+#define reinterpret_c_style(origin) *((unsigned long*)origin)
 
 #endif
