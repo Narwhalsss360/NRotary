@@ -35,6 +35,6 @@
 #define removeInterrupt(pin) detachInterrupt(digitalPinToInterrupt(pin));
 #define BCD2DEC(num) hornerScheme(num, 0x10, 10)
 
-#define reinterpret_c_style(origin) *((unsigned long*)origin)
+#define reinterpret_c_style(type, origin) *((type*)origin)
 
 #endif
