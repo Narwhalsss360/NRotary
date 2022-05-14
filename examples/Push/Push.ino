@@ -2,7 +2,7 @@
 #include <NPush.h>
 
 //Serial.begin() rate
-#define BAUDRATE 9600
+int baudrate = 9600;
 
 //Rotary encoder pin A.
 int rotaryAPin = 2;
@@ -19,7 +19,7 @@ int debounce = 50;
 //Using interrupts (Recommended).
 bool usingInterrupt = true;
 
-Push button = Push(buttonPin, INPUT_PULLUP, debounce);
+Push button = Push(rotaryBPin, INPUT_PULLUP, debounce);
 //                    ^             ^          ^
 //                   pin      pull up/down debounce time
 
@@ -39,7 +39,7 @@ void rotaryServiceRoutineWrapper()
 
 void setup()
 {
-    Serial.begin(BAUDRATE);
+    Serial.begin(baudrate);
     attachInterrupt(digitalPinToInterrupt(rotaryAPin), rotaryServiceRoutineWrapper, rotary.mode);
     //                           ^                                  ^                   ^
     //                          Pin                                ISR                 mode
