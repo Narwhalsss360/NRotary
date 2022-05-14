@@ -1,7 +1,7 @@
 #include <NRotary.h>
 
 //Serial.begin() rate
-int baudrate 9600
+int baudrate = 9600;
 
 //Rotary encoder pin A.
 int rotaryAPin = 2;
