@@ -7,7 +7,7 @@
 	#include "WProgram.h"
 #endif
 
-#include "NDefs.h"
+#include <NDefs.h>
 
 enum ROTARYSTATES
 {
