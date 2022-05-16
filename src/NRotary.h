@@ -1,5 +1,5 @@
-#ifndef NRotary
-#define NRotary
+#ifndef NRotary_h
+#define NRotary_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
 	#include "Arduino.h"
