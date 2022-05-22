@@ -22,9 +22,4 @@
     </Text>
     <Text Include="$(MSBuildThisFileDirectory)keywords.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\NDefs\src\NDefs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
 </Project>

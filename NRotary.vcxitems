@@ -19,10 +19,6 @@
     <Text Include="$(MSBuildThisFileDirectory)src\NRotary.h" />
   </ItemGroup>
   <ItemGroup>
-    <!-- <ClInclude Include="$(MSBuildThisFileDirectory)NRotary.h" /> -->
-    <ClInclude Include="$(MSBuildThisFileDirectory)..\NDefs\src\NDefs.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\NRotary.cpp" />
   </ItemGroup>
 </Project>
