@@ -9,6 +9,9 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx</Extensions>
     </Filter>
+    <Filter Include="Library metdata">
+      <UniqueIdentifier>{6052fbb9-026a-4ca4-a434-331ca3d0daaa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\NRotary.cpp">
@@ -16,10 +19,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="$(MSBuildThisFileDirectory)library.properties" />
     <Text Include="$(MSBuildThisFileDirectory)src\NRotary.h">
       <Filter>Header Files</Filter>
     </Text>
-    <Text Include="$(MSBuildThisFileDirectory)keywords.txt" />
+    <Text Include="$(MSBuildThisFileDirectory)library.properties">
+      <Filter>Library metdata</Filter>
+    </Text>
+    <Text Include="$(MSBuildThisFileDirectory)keywords.txt">
+      <Filter>Library metdata</Filter>
+    </Text>
   </ItemGroup>
 </Project>
