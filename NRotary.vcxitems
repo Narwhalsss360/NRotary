@@ -21,4 +21,7 @@
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\NRotary.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)..\NHC-SR04\README.md" />
+  </ItemGroup>
 </Project>

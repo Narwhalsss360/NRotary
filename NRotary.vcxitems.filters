@@ -9,7 +9,7 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx</Extensions>
     </Filter>
-    <Filter Include="Library metdata">
+    <Filter Include="Library metadata">
       <UniqueIdentifier>{6052fbb9-026a-4ca4-a434-331ca3d0daaa}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -23,10 +23,15 @@
       <Filter>Header Files</Filter>
     </Text>
     <Text Include="$(MSBuildThisFileDirectory)library.properties">
-      <Filter>Library metdata</Filter>
+      <Filter>Library metadata</Filter>
     </Text>
     <Text Include="$(MSBuildThisFileDirectory)keywords.txt">
-      <Filter>Library metdata</Filter>
+      <Filter>Library metadata</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)..\NHC-SR04\README.md">
+      <Filter>Library metadata</Filter>
+    </None>
   </ItemGroup>
 </Project>
