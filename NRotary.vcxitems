@@ -19,9 +19,13 @@
     <Text Include="$(MSBuildThisFileDirectory)src\NRotary.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Gradational.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\NRotary.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)..\NHC-SR04\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\Gradational.h" />
   </ItemGroup>
 </Project>
