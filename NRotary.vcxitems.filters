@@ -14,17 +14,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\NRotary.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\Gradational.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\Gradational.cpp">
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\RotaryDecoder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="$(MSBuildThisFileDirectory)src\NRotary.h">
-      <Filter>Header Files</Filter>
-    </Text>
     <Text Include="$(MSBuildThisFileDirectory)library.properties">
       <Filter>Library metadata</Filter>
     </Text>
@@ -39,6 +36,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Gradational.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\RotaryDecoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

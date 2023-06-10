@@ -16,16 +16,16 @@
   <ItemGroup>
     <Text Include="$(MSBuildThisFileDirectory)keywords.txt" />
     <Text Include="$(MSBuildThisFileDirectory)library.properties" />
-    <Text Include="$(MSBuildThisFileDirectory)src\NRotary.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)src\Gradational.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)src\NRotary.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\RotaryDecoder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)..\NHC-SR04\README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Gradational.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\RotaryDecoder.h" />
   </ItemGroup>
 </Project>
