@@ -5,36 +5,36 @@ Gradational::Gradational()
 {
 }
 
-void Gradational::increment(bool increase)
+void Gradational::gradate(bool increase)
 {
     switch (m_Type)
     {
         case I_FLOAT:
-            increment<float>(increase);
+            gradate<float>(increase);
             break;
 	    case I_DOUBLE:
-            increment<double>(increase);
+            gradate<double>(increase);
             break;
 	    case I_S8:
-            increment<int8_t>(increase);
+            gradate<int8_t>(increase);
             break;
 	    case I_U8:
-            increment<uint8_t>(increase);
+            gradate<uint8_t>(increase);
             break;
 	    case I_S16:
-            increment<int16_t>(increase);
+            gradate<int16_t>(increase);
             break;
 	    case I_U16:
-            increment<uint16_t>(increase);
+            gradate<uint16_t>(increase);
             break;
 	    case I_S32:
-            increment<int32_t>(increase);
+            gradate<int32_t>(increase);
             break;
 	    case I_S64:
-            increment<int64_t>(increase);
+            gradate<int64_t>(increase);
             break;
 	    case I_U64:
-            increment<uint64_t>(increase);
+            gradate<uint64_t>(increase);
             break;
     }
 }

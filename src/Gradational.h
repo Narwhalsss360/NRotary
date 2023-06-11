@@ -2,6 +2,10 @@
 #define Gradational_h
 
 #include <stdint.h>
+#include <Arduino.h>
+
+#define INCREMENT true
+#define DECREMENT false
 
 #define __IR__(i) *(IntegralType*)i
 
@@ -26,7 +30,7 @@ public:
 	template <typename IntegralType>
 	void set(IntegralType* pointer, IntegralType low, IntegralType high, IntegralType step, INTEGRAL_TYPES type, bool wrap = false)
 	{
-		m_Value = *(uint64_t*)pointer;
+		m_Value = pointer;
 		m_Low = *(uint64_t*)&low;
 		m_High = *(uint64_t*)&high;
 		m_Step = *(uint64_t*)&step;
@@ -34,10 +38,10 @@ public:
 		m_Wrap = wrap;
 	}
 
-	void increment(bool increase);
+	void gradate(bool increase);
 
 	template <typename IntegralType>
-	void increment(bool increase)
+	void gradate(bool increase)
 	{
 		if (m_Value == nullptr)
 			return;

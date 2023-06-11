@@ -1,8 +1,5 @@
 #include "RotaryDecoder.h"
 
-#define CW 0b00001000
-#define CCW 0b00010000
-
 #define CCW_STATE_OFFSET 3
 
 #define INVERTABLE(i_cond, expr) ((i_cond) ? !expr : expr)

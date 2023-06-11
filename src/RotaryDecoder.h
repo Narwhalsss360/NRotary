@@ -1,7 +1,8 @@
 #ifndef RotaryDecoder_h
 #define RotaryDecoder_h
 
-#include <Arduino.h>
+#define CW 0b00001000
+#define CCW 0b00010000
 
 class RotaryDecoder
 {
