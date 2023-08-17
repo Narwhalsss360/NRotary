@@ -26,6 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)src\Gradational.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\NRotary.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)src\RotaryDecoder.h" />
   </ItemGroup>
 </Project>

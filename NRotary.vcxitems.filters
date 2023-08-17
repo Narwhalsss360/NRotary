@@ -41,5 +41,8 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)src\RotaryDecoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\NRotary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

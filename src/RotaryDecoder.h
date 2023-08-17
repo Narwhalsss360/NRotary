@@ -1,6 +1,12 @@
 #ifndef RotaryDecoder_h
 #define RotaryDecoder_h
 
+#if defined(ARDUINO) && ARDUINO >= 100
+    #include "Arduino.h"
+#else
+    #include "WProgram.h"
+#endif
+
 #define CW 0b00001000
 #define CCW 0b00010000
 
