@@ -65,6 +65,8 @@ public:
 				__IR__(m_Value) = __IR__(&m_Low);
 		}
 	}
+
+	void* current();
 private:
 	void* m_Value;
 	uint64_t m_Low, m_High, m_Step;

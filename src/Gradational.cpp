@@ -38,3 +38,8 @@ void Gradational::gradate(bool increase)
             break;
     }
 }
+
+void* Gradational::current()
+{
+    return m_Value;
+}
