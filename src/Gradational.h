@@ -27,6 +27,14 @@ class Gradational
 public:
 	Gradational();
 
+	/// @brief Sets the variable to gradate.
+	/// @tparam IntegralType type of `variable` to gradate
+	/// @param pointer pointer to variable to gradate
+	/// @param low minimum value for `variable`
+	/// @param high maximum valie for `variable`
+	/// @param step gradate `variable` with `step`
+	/// @param type type of `variable` -> `INTEGRAL_TYPES` enum
+	/// @param wrap wrap variable from `min -> max` or `max -> min`, circular
 	template <typename IntegralType>
 	void set(IntegralType* pointer, IntegralType low, IntegralType high, IntegralType step, INTEGRAL_TYPES type, bool wrap = false)
 	{
@@ -38,8 +46,12 @@ public:
 		m_Wrap = wrap;
 	}
 
+	/// @brief Gradate currently set `variable`
+	/// @param increase increment if `increate = true` else decrement
 	void gradate(bool increase);
 
+	/// @brief Gradate currently set `variable`
+	/// @param increase increment if `increate = true` else decrement
 	template <typename IntegralType>
 	void gradate(bool increase)
 	{
@@ -66,6 +78,8 @@ public:
 		}
 	}
 
+	/// @brief Gets the pointer to the current `variable`
+	/// @return `void*` pointer to `variable`
 	void* current();
 private:
 	void* m_Value;

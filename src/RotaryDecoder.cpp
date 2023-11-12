@@ -23,7 +23,7 @@ RotaryDecoder::RotaryDecoder(const byte pinA, const byte pinB, const byte mode, 
     pinMode(pinB, mode);
 }
 
-byte RotaryDecoder::decode()
+rotary_state_t RotaryDecoder::decode()
 {
 	if (m_Timestate >= CW) m_Timestate = 0;
 
@@ -32,7 +32,7 @@ byte RotaryDecoder::decode()
 	return m_Timestate;
 }
 
-byte RotaryDecoder::timeState()
+rotary_state_t RotaryDecoder::timeState()
 {
 	return m_Timestate;
 }

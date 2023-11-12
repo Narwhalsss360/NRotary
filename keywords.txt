@@ -1,10 +1,29 @@
 NRotary             	LITERAL1
 
-CLOCKWISE           	LITERAL1
-COUNTER_CLOCKWISE   	LITERAL1
+CW                     	LITERAL1
+CCW                    	LITERAL1
 
-Rotary				    KEYWORD1
-serviceRoutine			KEYWORD2
-getState				KEYWORD2
-getSwitch				KEYWORD2
-mode					KEYWORD2
+rotary_state_t          LITERAL1
+
+RotaryDecoder		    KEYWORD1
+decode      			KEYWORD2
+timeState				KEYWORD2
+
+INCREMENT               LITERAL1
+DECREMENT               LITERAL1
+
+INTEGRAL_TYPES          LITERAL1
+I_FLOAT                 LITERAL1
+I_DOUBLE                LITERAL1
+I_S8                    LITERAL1
+I_U8                    LITERAL1
+I_S16                   LITERAL1
+I_U16                   LITERAL1
+I_S32                   LITERAL1
+I_S64                   LITERAL1
+I_U64                   LITERAL1
+
+Gradational             KEYWORD1
+set                     KEYWORD1
+gradate                 KEYWORD1
+current                 KEYWORD1
