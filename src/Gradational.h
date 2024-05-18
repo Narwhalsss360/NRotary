@@ -18,6 +18,7 @@ enum INTEGRAL_TYPES
 	I_S16,
 	I_U16,
 	I_S32,
+	I_U32,
 	I_S64,
 	I_U64
 };

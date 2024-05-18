@@ -30,6 +30,9 @@ void Gradational::gradate(bool increase)
 	    case I_S32:
             gradate<int32_t>(increase);
             break;
+        case I_U32:
+            gradate<uint32_t>(increase);
+            break;
 	    case I_S64:
             gradate<int64_t>(increase);
             break;
