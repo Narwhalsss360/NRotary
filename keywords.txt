@@ -20,6 +20,7 @@ I_U8                    LITERAL1
 I_S16                   LITERAL1
 I_U16                   LITERAL1
 I_S32                   LITERAL1
+I_U32                   LITERAL1
 I_S64                   LITERAL1
 I_U64                   LITERAL1
 
