@@ -10,6 +10,8 @@
 #define CW 0b00001000
 #define CCW 0b00010000
 
+#define ROTARY_TURNED_STATE(state) (state < CW)
+
 using rotary_state_t = byte;
 
 class RotaryDecoder

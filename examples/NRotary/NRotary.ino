@@ -11,17 +11,15 @@ RotaryDecoder decoder = RotaryDecoder(ROTARY_A_PIN, ROTARY_B_PIN, ROTARY_MODE, R
 void rotaryISR()
 {
     rotary_state_t state = decoder.decode();
-    if (state < CW) //No CCW or CW
+    if (!ROTARY_TURNED_STATE(state)) //No CCW or CW
         return;
-    if (state == CCW)
-        Serial.println("Counter-Clockwise");
-    else
-        Serial.println("Clockwise");
+
+    Serial.println(state == CCW ? "Counter-Clockwise" : "Clockwise");
 }
 
 void setup()
 {
-    Serial.begin(BAUDRATE)
+    Serial.begin(BAUDRATE);
     attachInterrupt(digitalPinToInterrupt(ROTARY_A_PIN), rotaryISR, CHANGE);
     attachInterrupt(digitalPinToInterrupt(ROTARY_B_PIN), rotaryISR, CHANGE);
 }
