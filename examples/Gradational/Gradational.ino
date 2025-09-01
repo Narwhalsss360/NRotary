@@ -7,17 +7,20 @@
 #define ROTARY_PIN_INVERTED false
 
 RotaryDecoder decoder = RotaryDecoder(ROTARY_A_PIN, ROTARY_B_PIN, ROTARY_MODE, ROTARY_PIN_INVERTED);
-Gradational gradational;
 
-uint32_t value1 = 0;
+uint32_t value1Initial = 0;
 uint32_t value1Low = 0;
 uint32_t value1High = 10;
 uint32_t value1Step = 1;
+Gradational<uint32_t> value1Gradational = Gradational<uint32_t>(value1Initial, value1Low, value1High, value1Step);
 
-double value2 = 0;
+double value2Initial = 0;
 double value2Low = 0;
 double value2High = 1;
 double value2Step = 0.01;
+Gradational<double> value2Gradational = Gradational<double>(value2Initial, value2Low, value2High, value2Step);
+
+AnyGradational* gradational = &value1Gradational;
 
 void rotaryISR()
 {
@@ -25,20 +28,20 @@ void rotaryISR()
     if (state < CW) //No CCW or CW
         return;
     if (state == CCW)
-        gradational.gradate(DECREMENT);
+        gradational->gradate(DECREMENT);
     else
-        gradational.gradate(INCREMENT);
+        gradational->gradate(INCREMENT);
 }
 
 void swap()
 {
-    if (gradational.current() == &value1)
+    if (gradational == &value1Gradational)
     {
-        gradational.set<double>(&value2, value2Low, value2High, value2Step, I_DOUBLE);
+        gradational = &value1Gradational;
     }
     else
     {
-        gradational.set<uint32_t>(&value1, value1Low, value1High, value1Step, I_U32);
+        gradational = &value2Gradational;
     }
 }
 
@@ -54,21 +57,21 @@ void serialEvent()
 
 void setup()
 {
-    Serial.begin(BAUDRATE)
+    Serial.begin(BAUDRATE);
     attachInterrupt(digitalPinToInterrupt(ROTARY_A_PIN), rotaryISR, CHANGE);
     attachInterrupt(digitalPinToInterrupt(ROTARY_B_PIN), rotaryISR, CHANGE);
 }
 
 void loop()
 {
-    if (gradational.current() == &value1)
+    if (gradational == &value1Gradational)
     {
         Serial.print("Value 1:");
-        Serial.println(value1);
+        Serial.println(value1Gradational.current());
     }
     else
     {
         Serial.print("Value 2:");
-        Serial.println(value2);
+        Serial.println(value2Gradational.current());
     }
 }
